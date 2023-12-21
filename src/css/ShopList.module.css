@@ -1,0 +1,50 @@
+.shopList {
+  display: flex;
+  gap: 2rem;
+}
+.shopList > div {
+  width: 15%;
+  max-width: 250px;
+  min-width: 150px;
+}
+.shopList > div > div {
+  position: fixed;
+  width: 10%;
+  max-width: 250px;
+  min-width: 150px;
+}
+.shopList > div > div > button {
+  display: block;
+  width: 100%;
+  background-color: var(--gray4);
+  border: none;
+  border-bottom: 5px solid transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  transition: .35s;
+}
+.shopList > div > div > button:hover {
+  border-color:  var(--point-c1);
+}
+.shopList > ul {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .shopList > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .shopList > ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+}
